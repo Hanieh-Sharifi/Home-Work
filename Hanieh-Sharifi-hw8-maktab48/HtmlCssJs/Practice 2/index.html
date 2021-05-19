@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="sideNav">
+        <div class="item header">
+            <h1>Header</h1>
+        </div>
+        <div class="item about" id="about">
+            <a>About</a>
+        </div>
+        <div class="item services" id="Services">
+            <a>Services</a>
+        </div>
+        <div class="item clinets" id="clients">
+            <a>Clients</a>
+        </div>
+        <div class="item contact" id="contact">
+            <a>Contact</a>
+        </div>
+        <div class="Dropdown" id="dropdown" onclick="toggler()">
+            Dropdown<i class="fa fa-caret-down" id="icon"></i>
+        </div>
+        <div class="dropdownCont" id="dropdownCont">
+            <a>Link 1</a>
+            <a>Link 2</a>
+            <a>Link 3</a>
+        </div>
+        <div class="item search" id="search" style="border: 0;">
+            <a>Search</a>
+        </div>
+    </div>
+    <div class="main">
+        <h2 style="margin-bottom: 30px;">Sidebar Dropdown</h2>
+        <p style="margin-bottom: 30px;">Click on the dropdown button to open the dropdown menu inside the side navigation.</p>
+        <p style="margin-bottom: 30px;">This sidebar is of full height (100%) and always shown.</p>
+        <p>Some random text..</p>
+      </div>
+</body>
+<script src="./js/main.js"></script>
+</html>

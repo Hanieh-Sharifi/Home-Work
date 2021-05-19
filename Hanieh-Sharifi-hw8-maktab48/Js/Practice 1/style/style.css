@@ -1,0 +1,115 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+}
+.parent
+{
+    border-radius: 5px;
+    background-color: #d1d0d0;
+    padding: 20px;
+    width: 50vw;
+}
+.row
+{
+    margin-top: 20px;
+}
+input, select, textarea
+{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgb(158, 157, 157);
+    border-radius: 5px;
+    resize: vertical;
+}
+textarea
+{
+    height: 200px;
+}
+label
+{
+    padding: 10px 10px 10px 0;
+    display: inline-block;
+}
+.col-25
+{
+    float: left;
+    width: 25%;
+}
+.col-75
+{
+    float: left;
+    width: 75%;
+}
+.row:after
+{
+    content: "";
+    display:table;
+    clear: both;
+}
+.button
+{
+    display: flex;
+    padding: 12px 20px;
+    margin-top: 20px;
+    border-radius:4px;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    text-transform:uppercase;
+    font-weight:400;
+    color:#FFFFFF;
+    background-color:#3369ff;
+    box-shadow:inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
+    text-align:center;
+    position:relative;
+    float: right;
+    cursor: pointer;
+    border: 0;
+    outline: none;
+}
+.button:active
+{
+    top:0.2em;
+}
+.emailValid
+{
+    margin-top: 10px;
+}
+#eValidAns
+{
+    font-size: 1rem;
+    color: red;
+    float: right;
+}
+#pValidAns
+{
+    font-size: 1rem;
+    color: red;
+    float: right;
+}
+
+@media (max-width: 740px)
+{
+    .parent
+    {
+        width: 100vw;
+    }
+    .col-25, .col-75, input[type=submit]
+    {
+      width: 100%;
+      margin-top: 0;
+    }
+    .submit
+    {
+        width: 100%;
+    }
+  
+}

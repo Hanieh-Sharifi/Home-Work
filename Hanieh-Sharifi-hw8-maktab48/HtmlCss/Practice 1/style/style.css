@@ -1,0 +1,53 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.parent
+{
+    border: 1px solid rgb(190, 190, 190);
+    width: 70%;
+    margin: 7% auto;
+    padding: 5px 10px;
+}
+
+table
+{
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+th, td
+{
+    text-align: left;
+    padding: 10px;
+}
+  
+tr:nth-child(even)
+{
+    background-color: #f2f2f2;
+}
+
+
+@media (max-width:750px)
+{
+    .parent
+    {
+        width: 80%;
+    }
+}
+
+@media (max-width: 576px)
+{
+    .parent
+    {
+        width: 100%;
+    }
+}

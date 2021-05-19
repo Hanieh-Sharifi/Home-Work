@@ -1,0 +1,191 @@
+li
+{
+    cursor: pointer;
+}
+.carousel-inner img
+{
+    object-fit: cover;
+    height: 550px;
+}
+.carousel-item > img
+{
+    position: relative;
+}
+.navbar-brand
+{
+    font-size: 1.9rem;
+}
+.textblock
+{
+    position: absolute;
+    top: 150px;
+    left: 150px;
+    color: white;
+    font-size: 1.5rem;
+    height: 300px;
+}
+.empty
+{
+    height: 20px;
+    background-color: #eeeeed;
+}
+
+.fontColor
+{
+    color : #2e2e2e;
+}
+.border-bottom
+{
+    border-color: #6a6a6a !important;
+    border-width: 2px !important;
+}
+.card-body-1 > i
+{
+    font-size: 3rem;
+}
+.card-1, .blocks
+{
+    cursor: default;
+}
+.firstBlockBg
+{
+    background-color: #cccccc;
+    height: 350px;
+}
+.firstBlockBg > i, .secondBlockBg > i
+{
+    font-size: 4.5rem;
+}
+.secondBlockBg
+{
+    background-color: #efefef;
+    height: 350px;
+}
+i
+{
+    transition: color .3s;
+}
+
+.card-1:hover i, .blocks:hover i
+{
+    color: rgb(255,193,7);
+}
+.circle-1
+{
+    height: 140px;
+    width: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+}
+.circle-2
+{
+    height: 40px;
+    width: 40px;
+    top: 0;
+    right: 0;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle-1, .circle-2
+{
+    transition: background-color .3s;
+}
+.card-body-2:hover .circle-1
+{
+    background-color: rgb(255,193,7) !important;
+}
+.card-body-2:hover .circle-2
+{
+    background-color: rgb(108,117,125) !important;
+}
+.curse
+{
+    cursor: pointer;
+    color: rgb(255,193,7);
+    text-decoration: none !important;
+}
+.curse:hover
+{
+    color: rgb(255,193,7);
+}
+.profileImage
+{
+    object-fit: cover;
+    width: 100%;
+    height: 95%;
+}
+.backGround
+{
+    background-color: rgb(239,239,239);
+}
+.profileIcon
+{
+    background-color: #444444;
+    width: 45px;
+    height: 45px;
+    font-size: 1.1em;
+    transition: background-color .3s;
+}
+.profileIcon:hover, .footerIcon:hover
+{
+    background-color: rgb(255,193,7);
+}
+.addIcon > li::before
+{
+    display: flex;
+    content:url('../imgs/check.svg');
+    color: #ffc107;
+}
+.footerIcon
+{
+    width: 40px;
+    height: 40px;
+    border: 2px solid white !important;
+    transition: background-color .3s;
+}
+.footerbg
+{
+    background-color: #232323;
+}
+
+
+@media (min-width:574px) and (max-width:766px)
+{
+    .blocks:nth-child(1)
+    {
+        background-color: #efefef;   
+    }
+    .blocks:nth-child(2)
+    {
+        background-color: #cccccc;   
+    }
+
+}
+
+@media (max-width:766px)
+{
+    .card-body-1
+    {
+        text-align: center !important;
+    }
+}
+
+@media (max-width:455px)
+{
+    .fontColor > h1
+    {
+        font-size: 1.65rem;
+    }
+    .border-bottom
+    {
+        border: 0 !important;
+    }
+    .card-body-1
+    {
+        text-align: center !important;
+    }
+}

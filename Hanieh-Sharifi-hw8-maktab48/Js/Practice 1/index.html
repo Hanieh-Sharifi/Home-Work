@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Form</title>
+</head>
+<body>
+    <div class="parent">
+        <div id="form">
+            <div class="row">
+                <div class="col-25">
+                    <label for="fname">First Name</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="fname" placeholder="Your name...">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="lname">Last Name</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="lname" placeholder="Your last name...">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="country">Country</label>
+                </div>
+                <div class="col-75">
+                    <select id="country">
+                        <option value="select">Select Country</option>
+                        <option value="australia">Australia</option>
+                        <option value="canada">Argentina</option>
+                        <option value="usa">America</option>
+                      </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="email">Email</label>
+                </div>
+                <div class="col-75">
+                    <input id="email" autocomplete="none" placeholder="example@email.com"">
+                    <div class="emailValid">
+                        <p id="eValidAns"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="phone">Phone Number</label>
+                </div>
+                <div class="col-75">
+                    <input id="phone" autocomplete="none" name="phone" placeholder="Your phone number..."">
+                    <div class="phoneValid">
+                        <p id="pValidAns"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="subject">Subject</label>
+                </div>
+                <div class="col-75">
+                    <textarea placeholder="Write something..." id="subject"></textarea>
+                </div>
+            </div>
+            <button class="button" id="myBtn" onclick="submit()"><span>Submit</span></button>
+        </div>
+    </div>
+</body>
+<script src="./js/main.js"></script>
+</html>
+
+<!-- نکته : زمانی که اینپوت ها خالی هستند متن خطا نمایش داده نمی شود ولی موقع ثبت اجازه داده نمیشود  -->

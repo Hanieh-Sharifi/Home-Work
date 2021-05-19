@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body>
+        <p>Click the button to sort the list alphabetically:</p>
+    <button onclick="sortList()">Sort</button>
+    <ul id="id01">
+    <li>Oslo</li>
+    <li>Stockholm</li>
+    <li>Berlin</li>
+    <li>Rome</li>
+    </ul>
+    <script>
+        // کارکرد کلی این فانکشن: مرتب کردن مقدار المنت هایی با تگ لیست
+        function sortList()
+        {
+            var list, i, switching, b, shouldSwitch;
+            list = document.getElementById("id01");
+            /** گرفتن المنتی با ایدی گفته شده یا در واقع گرفتن تگ لیست **/
+            switching = true;
+            /** مفدار متغیر را برابر با بولین گفته شده میزاریم **/
+            /** این حلقه وایل تا زمانی که مقدار متغیر داخلش درست باشد اجرا میشود **/
+            while (switching)
+            {
+                switching = false;
+                // مقدار متغیر را برابر به مقدار گفته شده میزاریم
+                b = list.getElementsByTagName("LI");
+                // متغیر گفته شده ارایه ای است از المنت هایی که تگ لیست دارن
+                /** کارکرد کلی حلقه: به ازای تک تک المنت هایی مه گرفته بودیم 
+                بررسی میکنیم که مرتب شده هستند یا نه، اگه مرتب نبودند از حلقه خارج میشویم **/
+                for (i = 0; i < (b.length - 1); i++)
+                {
+                    shouldSwitch = false;
+                    if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase())
+                    {
+                        shouldSwitch = true;
+                        // اگر مرتب نباشید این متغیر را برابر با ترو میزاریم تا بدونیم که نیاز به جا به جایی داریم
+                        break;
+                    }
+                }
+                if (shouldSwitch)
+                {
+                    // وقتی مقدار متغیر درست باشد این شرط برقرار میشود و جا به جایی صورت میگیرد
+                    b[i].parentNode.insertBefore(b[i + 1], b[i]);
+                    switching = true;
+                    // مقدار را ترو میزاریم تا المنت های بعدی نیز چک شوند
+                }
+            }
+        }
+    </script>
+</body>
+</html>
