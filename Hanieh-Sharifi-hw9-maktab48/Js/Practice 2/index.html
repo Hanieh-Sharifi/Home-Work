@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body>
+        <p>Click the button to get your coordinates.</p>
+        <button onclick="getLocation()">Try It</button>
+        <p><strong>Note:</strong> The geolocation property is not 
+        supported in IE8 and earlier versions.</p>
+        <p id="demo"></p>
+
+    <script>
+        /** تعریف متغیر ایکس به صورت گلوبال و گرفتن المنت با ای دی دمو **/
+        var x = document.getElementById("demo");
+        /** فانکشن برای اینکه چک کنیم گرفتن موقعیت در این بروزر ساپورت میشه یا نه **/
+        function getLocation()
+        {
+            /** اگر بروزر قابلیت دریافت موقعیت را پشتیبانی میکرد **/
+            if (navigator.geolocation) 
+            {
+                /** موقعیت الان دستگاه را بگیر و فانکشن گفته شده را صدا بزن **/
+                navigator.geolocation.getCurrentPosition(showPosition);
+            }
+            else
+            {
+                /** اگر بروزر این قابلیت را ساپورت نمیکند در خروجی نشان بده که ساپورت نمیشود **/
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+        /** در این فانکشن پوزیشن دستگاه را گرفتیم و میخواهیم ان را نمایش دهیم **/
+        function showPosition(position)
+        {
+            /** در خروجی موقعیت دستگاه را به دو صورت نمایش میدهد **/
+            x.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+            // latitude : from -90 to 90 degree
+            // longtitude : from -180 to 180 degree
+        }
+    </script>
+    </body>
+</html>

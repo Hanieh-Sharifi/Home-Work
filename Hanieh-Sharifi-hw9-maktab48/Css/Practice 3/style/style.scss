@@ -1,0 +1,40 @@
+$input-border: #DEE2E6;
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+
+table
+{
+    border-collapse: collapse;
+    text-align: center;
+}
+
+thead th
+{
+    position: sticky !important;
+    top: 0 !important;
+    background-color: #fff;
+}
+
+tbody tr:nth-child(even)
+{
+    background-color: #BEF2F5;
+}
+
+.pagination li:hover
+{
+    cursor: pointer;
+}
+
+.active
+{
+    background-color: #007BFF !important;
+    button
+    {
+        color: white !important;
+    }
+}

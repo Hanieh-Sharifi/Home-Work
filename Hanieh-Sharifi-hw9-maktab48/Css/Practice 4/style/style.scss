@@ -1,0 +1,78 @@
+$background-color: #E9ECEF;
+$color: #555;
+$border-radius: 0px;
+$input-border: 2px solid #ccc;
+
+@mixin button-left-radius
+{
+    border-top-right-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+}
+@mixin button-right-radius
+{
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+}
+
+@mixin input-style
+{
+    border: 0;
+    border-top: $input-border;
+    border-bottom: $input-border;
+    background-color: $background-color;
+    color: $color;
+    text-align: center;
+    border-radius: $border-radius;
+    width: 100px;
+}
+@mixin button-style
+{
+    background-color: $background-color;
+    color: $color;
+    text-align: center;
+    border: 0;
+    outline: none;
+}
+
+.parent
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    height: 250px;
+}
+.parent > .container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.incremental-input
+{
+    display: flex;
+}
+.form-control
+{
+    text-align: center;
+    @include input-style;
+}
+.btn
+{
+    @include button-style;
+    &.left
+    {
+        @include button-left-radius;
+    }
+    &.right
+    {
+        @include button-right-radius;
+    }
+    &:hover
+    {
+        background-color: darken($background-color, 10%);
+    }
+}
