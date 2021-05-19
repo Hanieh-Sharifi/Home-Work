@@ -1,0 +1,166 @@
+@import url(./FontsFree-Net-ir_sans.ttf);
+
+
+@font-face
+{
+    font-family: IranSans;
+    src: url(./FontsFree-Net-ir_sans.ttf);
+    /* font-weight: bold; */
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: IranSans;
+}
+
+.parent
+{
+    width: 86vw;
+    margin: auto;
+}
+
+
+.result-btn-parent
+{
+    margin: 30px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.red-disabled-btn, .green-disabled-btn
+{
+    margin-top: 20px;
+    width: 500px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+.red-disabled-btn
+{
+    background-color: rgb(232,124,135);
+}
+.green-disabled-btn
+{
+    background-color: rgb(116,198,135);
+}
+
+
+.add-btn-parent
+{
+    float: left;
+    margin-bottom: 10px;
+}
+.add-btn
+{
+    background-color: rgb(218,224,229);
+    border: 0;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.add-btn:hover
+{
+    background-color: rgb(223, 232, 240);
+    transform: scale(1.1);
+}
+
+
+.table-parent
+{
+    clear: both;
+    overflow-x: auto;
+    direction: rtl;
+}
+table, th
+{
+    border: 1px solid black;
+    border-collapse: collapse;
+    font-family: IranSans;
+}
+thead th>div
+{
+    font-size: .8rem;
+    font-weight: normal;
+    width: 120px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+thead th:last-child div
+{
+    width: 70px;
+}
+tbody div, tr input:last-child, select
+{
+    width: 115px;
+}
+tbody th
+{
+    padding: 1px;
+}
+tbody div, tbody th
+{
+    font-size: .8rem;
+    font-weight: 500;
+}
+input, select
+{
+    border: 0;
+    outline: 0;
+    padding: 3px 8px;
+    font-size: .8rem;
+}
+input:focus, select:focus
+{
+    outline: 2px solid #007BFF;
+}
+.btn-parent
+{
+    width: 70px;
+}
+.undo-btn, .save-btn, .trash-btn, .edit-btn
+{
+    float: left;
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    border: 0;
+    padding: 7px 0px;
+    cursor: pointer;
+    color: #007BFF;
+}
+.trash-btn
+{
+    color: red;
+}
+
+
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+

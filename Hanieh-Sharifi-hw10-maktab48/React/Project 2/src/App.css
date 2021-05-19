@@ -1,0 +1,22 @@
+body 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.Calculator 
+{
+    width: 400px;
+    height: 300px;
+    margin: 50px auto;
+}
+
+@media (max-width: 425px)
+{
+    .Calculator
+    {
+        width: 300px;
+    }
+}
