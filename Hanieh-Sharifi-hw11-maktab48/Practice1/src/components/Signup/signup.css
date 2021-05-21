@@ -1,0 +1,62 @@
+@font-face
+{
+    font-family: IranSans;
+    src: url(../FontsFree-Net-ir_sans.ttf);
+}
+
+.signup-parent
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.input-parent
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.signup-header
+{
+    color: white;
+    text-align: center;
+    font-weight: 300;
+    font-family: IranSans;
+}
+
+.submit-signup-btn
+{
+    width: 100%;
+    height: 40px;
+    background-color: rgba(26,177,136,255);
+    border: 0;
+    outline: none;
+    color: white;
+    font-family: IranSans;
+    cursor: pointer;
+}
+
+.education-input-parent, .birth-input-parent
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+select
+{
+    float: right;
+    padding: 5px 5px 2px 10px;
+    font-family: IranSans;
+    background-color: rgba(0,0,0,0);
+    border: 1px solid #5d6e72;
+    outline: none;
+    color: white;
+    direction: rtl;
+}
+option
+{
+    color: black;
+}

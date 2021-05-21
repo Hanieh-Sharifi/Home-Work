@@ -1,0 +1,27 @@
+@font-face {
+    font-family: IranSans;
+    src: url(../FontsFree-Net-ir_sans.ttf);
+}
+
+.password-input-parent
+{
+    display: flex;
+}
+
+input[type="email"], input[type="password"], input[type="text"]
+{
+    padding: 5px 5px 2px 10px;
+    font-family: IranSans;
+    background-color: rgba(0,0,0,0);
+    border: 1px solid #5d6e72;
+    outline: none;
+    color: white;
+}
+.fa
+{
+    text-align: right;
+}
+::placeholder
+{
+    text-align: right;
+}
