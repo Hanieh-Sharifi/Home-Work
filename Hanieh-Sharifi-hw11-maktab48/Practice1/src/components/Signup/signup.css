@@ -60,3 +60,11 @@ option
 {
     color: black;
 }
+
+.success
+{
+    color: white;
+    font-size: 1.1rem;
+    text-align: center;
+    font-family: IranSans;
+}

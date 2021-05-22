@@ -5,7 +5,9 @@ import Signup from './components/Signup/Signup';
 
 
 function App() {
+
   const [display, setDisplay] = useState(true);
+  
   return (
     <div className="app-comp-parent" style={{height:`${!display ? 500 : 400}px`}}>
       <div className="btn-parent">

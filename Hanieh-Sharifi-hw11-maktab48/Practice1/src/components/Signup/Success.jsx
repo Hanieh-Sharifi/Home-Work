@@ -1,18 +1,19 @@
 import React from 'react'
 
-function Success({fname,lname,email,education,eduPlace,country,city}) {
+function Success({fname,lname,email,education,educationPlace,country,city}) {
     return (
-        <div style={{color: "white", fontSize: "1.4rem", textAlign: "center"}}>
-            {`کاربر گرامی ${fname} ${lname}`}
+        <div className="success">
+            {` ' کاربر گرامی ' ${fname} ${lname}`}
             <br/>
+            {`${email} با ایمیل`}
             <br/>
-            {`${email} :با ایمیل`}
+            {education && educationPlace && `با تحصیلات ${education}`}
             <br/>
+            {education && educationPlace && (`در ${educationPlace}`)}
             <br/>
-            {`تحصیلات ${education} در ${eduPlace}`}
+            {city && country && (`متولد استان ${country} و شهر ${city}`)}
             <br/>
-            <br/>
-            {`متولد استان ${country} و شهر ${city}`}
+            <h3>ثبت نام شدید</h3>
         </div>
     )
 }

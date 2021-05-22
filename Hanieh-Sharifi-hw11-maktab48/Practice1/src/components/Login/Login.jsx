@@ -10,14 +10,12 @@ function Login() {
     const [forgotten, setForgotten] = useState(true)
     const [result, setResult] = useState(true)
     const [emailValue, setEmailValue] = useState("");
+    const [passValue, setPassValue] = useState("");
+
     let text = ["شما وارد شدید","رمز مجددا برای شما ارسال شد"]
-    function email(e)
-    {
-        setEmailValue(e.target.value);
-    }
+
     function enterText(e)
     {
-        e.preventDefault();
         setResult(!result);
         if (e.target.value === "ورود")
         {
@@ -28,16 +26,18 @@ function Login() {
             i = 1;
             text.push(emailValue)
         }
+        
     }
+
     return (
         <form>
             {result && (<h2 className="login-header">{forgotten ? "خوش آمدید" : "ایمیل خود را وارد کنید"}</h2>)}
-            {result && forgotten && (<Input type={"email"} textHolder={"پست الکترونیک *"} size={38} language={"en"}/>)}
-            {result && forgotten && (<PasswordInput textHolder={"رمز عبور *"} size={38} language={"en"}/>)}
-            {result && forgotten && (<a className="password-link" onClick={() => setForgotten(!forgotten)}>فراموش کردید؟</a>)}
-            {result && !forgotten && (<Input change={email} value={emailValue} textHolder={"پست الکترونیک *"} size={40} type={"email"} language={"en"}/>)}
-            {result && (<input onClick={(e)=> enterText(e)} type="submit" className="submit-login-btn" value={forgotten ? "ورود" : "ثبت"}/>)}
+            {result && (<Input change={(e) => setEmailValue(e.target.value)} type={"email"} textHolder={"پست الکترونیک *"} size={38} language={"en"}/>)}
+            {result && forgotten && (<PasswordInput changed={(e) => setPassValue(e.target.value)} value={passValue} textHolder={"رمز عبور *"} size={38} language={"en"}/>)}
+            {result && forgotten && (<a className="password-link" onClick={() => {setForgotten(!forgotten);}}>فراموش کردید؟</a>)}
+            {result && (<input onClick={(e)=> {e.preventDefault();(passValue !== "" || !forgotten) && emailValue !== "" && enterText(e);}} type="submit" className="submit-login-btn" value={forgotten ? "ورود" : "ثبت"}/>)}
             {!result && (<Enter resultText={text[i]} />)}
+            {!result && !forgotten && (<input onClick={(e)=> {e.preventDefault();setForgotten(true);setResult(true)}} type="submit" className="submit-login-btn" value={"بازگشت"}/>)}
         </form>
     );
 };

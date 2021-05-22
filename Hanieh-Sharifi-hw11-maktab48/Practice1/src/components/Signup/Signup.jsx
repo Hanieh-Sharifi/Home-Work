@@ -5,9 +5,9 @@ import Selection from './Selection';
 import "./signup.css";
 import Success from './Success';
 
-let education = ["کارشناسی","کارشناسی ارشد","دکترا"];
-let country = ["تهران","بوشهر","اصفهان","البرز","فارس","مرکزی","همدان","خوزستان","اردبیل","یزد"];
-let city = [["تهران","اسلامشهر"],["بوشهر","جم"],["اصفهان","اردستان"],["کرج","طالقان"],["شیراز","مرودشت"],["اراک","ساوه"],["ملایر","نهاوند"],["دزفول","اهواز"],["مشگین شهر","خلخال"],["یزد","اردکان"]];
+let educationLevel = ["کارشناسی","کارشناسی ارشد","دکترا"];
+let countryLevel = ["تهران","بوشهر","اصفهان","البرز","فارس","مرکزی","همدان","خوزستان","اردبیل","یزد"];
+let cityLevel = [["تهران","اسلامشهر"],["بوشهر","جم"],["اصفهان","اردستان"],["کرج","طالقان"],["شیراز","مرودشت"],["اراک","ساوه"],["ملایر","نهاوند"],["دزفول","اهواز"],["مشگین شهر","خلخال"],["یزد","اردکان"]];
 
 function Signup() {
 
@@ -15,28 +15,36 @@ function Signup() {
     const [birth, setBirth] = useState(false);
     const [index, setIndex] = useState(-1);
     const [result, setResult] = useState(false);
-    const [information, setInformation] = useState("")
-
-    console.log(information);
+    const [name, setName] = useState("");
+    const [family, setFamily] = useState("");
+    const [email, setEmail] = useState("");
+    const [educationPlace, setEducationPlace] = useState("");
+    const [education, setEducation] = useState("");
+    const [country, setCountry] = useState("");
+    const [city, setCity] = useState("");
+    const [cityIndex, setCityIndex] = useState(-1);
+    const [passValue, setPassValue] = useState("");
+    
+    
     return (
         <form className="signup-parent">
             {!result && (<h3 className="signup-header">رایگان ثبت نام کنید</h3>)}
             {!result && (<div className="input-parent">
-                <Input textHolder={"نام *"} language={"fa"} size={15} type={"text"}/>
-                <Input type={"text"} textHolder={"نام خانوادگی *"} language={"fa"} size={15}/>
+                <input onChange={(e) => setFamily(e.target.value)} type={"text"} placeholder={"نام خانوادگی *"} className={"fa"} size={15}/>
+                <input onChange={(e) => setName(e.target.value)} placeholder={"نام *"} className={"fa"} size={15} type={"text"}/>
             </div>)}
-            {!result && (<Input language={"en"} size={38} type={"email"} textHolder={"پست الکترونیک *"}/>)}
-            {!result && (<PasswordInput language={"en"} size={38} textHolder={"کلمه عبور *"}/>)}
+            {!result && (<input onChange={(e) => setEmail(e.target.value)} className={"en"} size={38} type={"email"} placeholder={"پست الکترونیک *"}/>)}
+            {!result && (<PasswordInput changed={(e) => setPassValue(e.target.value)} value={passValue} language={"en"} size={38} textHolder={"کلمه عبور *"}/>)}
             {!result && (<div className="education-input-parent">
-                {display && (<Input  language={"fa"} size={15} type={"text"} textHolder={"محل تحصیلات *"}/>)}
-                <Selection selectionText={"انتخاب تحصیلات"} clickAction={(e)=>{console.log(e.target.value);e.target.value === "false" ? setDisplay(false) : setDisplay(true);}} size={display ? 152 : 313} formFor={education} />
+                {display && (<input onChange={(e) => setEducationPlace(e.target.value) } className={"fa"} size={15} type={"text"} placeholder={"محل تحصیلات *"}/>)}
+                <Selection selectValue={(e) => {setEducation(educationLevel[parseInt(e.target.value)])}} selectionText={"انتخاب تحصیلات"} clickAction={(e)=>{e.target.value === "false" ? setDisplay(false) : setDisplay(true);}} size={display ? 152 : 313} formFor={educationLevel} />
             </div>)}
             {!result && (<div className="birth-input-parent">
-                {birth && (<Selection size={birth && 152} formFor={city[parseInt(index)]} clickAction={() => setBirth(true)} selectionText={"انتخاب محل تولد"}/>)}
-                <Selection size={birth ? 152 : 313} selectionText={"انتخاب استان"} clickAction={(e)=>{setIndex(e.target.value);e.target.value === "false" ? setBirth(false) : setBirth(true);}} formFor={country} />
+                {birth && (<Selection selectValue={(e) => {setCity(cityLevel[cityIndex][parseInt(e.target.value)])}} size={birth && 152} formFor={cityLevel[parseInt(index)]} clickAction={() => setBirth(true)} selectionText={"انتخاب محل تولد"}/>)}
+                <Selection selectValue={(e) => {setCountry(countryLevel[parseInt(e.target.value)]);setCityIndex(e.target.value)}} size={birth ? 152 : 313} selectionText={"انتخاب استان"} clickAction={(e)=>{setIndex(e.target.value);e.target.value === "false" ? setBirth(false) : setBirth(true);}} formFor={countryLevel} />
             </div>)}
-            {!result && (<input onClick={(e) => {e.preventDefault();setResult(true)}} type="submit" className="submit-signup-btn" value="ثبت نام"/>)}
-            {result && (<Success fname={information}/>)}
+            {!result && (<input onClick={(e) => {e.preventDefault();((education && educationPlace) || (!education && !educationPlace)) && country && city && passValue && name && family && email && setResult(true)}} type="submit" className="submit-signup-btn" value="ثبت نام"/>)}
+            {result && (<Success fname={name} lname={family} email={email} educationPlace={educationPlace} education={education} city={city} country={country} />)}
         </form>
 
     );
