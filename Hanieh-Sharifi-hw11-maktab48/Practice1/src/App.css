@@ -64,3 +64,12 @@
     justify-content: center;
     position: absolute;
 }
+.error
+{
+    margin-top: 5px;
+    padding-right: 10px;
+    font-family: IranSans;
+    color: red;
+    font-size: .7rem;
+    text-align: right;
+}

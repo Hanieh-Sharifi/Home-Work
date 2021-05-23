@@ -1,5 +1,4 @@
 import React from 'react'
-import { FaSortAmountDown } from 'react-icons/fa';
 
 function Selection({clickAction,size,formFor,selectionText,selectValue}) {
     return (

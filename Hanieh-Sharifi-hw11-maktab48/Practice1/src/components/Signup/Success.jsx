@@ -8,10 +8,10 @@ function Success({fname,lname,email,education,educationPlace,country,city}) {
             {`${email} با ایمیل`}
             <br/>
             {education && educationPlace && `با تحصیلات ${education}`}
-            <br/>
             {education && educationPlace && (`در ${educationPlace}`)}
             <br/>
             {city && country && (`متولد استان ${country} و شهر ${city}`)}
+            <br/>
             <br/>
             <h3>ثبت نام شدید</h3>
         </div>
