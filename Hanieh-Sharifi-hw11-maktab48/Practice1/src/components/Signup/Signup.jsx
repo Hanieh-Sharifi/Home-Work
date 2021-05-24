@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import PasswordInput from '../Input/PasswordInput';
 import Selection from './Selection';
 import "./signup.css";
 import Success from './Success';
+import Input from '../Input/Input';
 
 let educationLevel = ["کارشناسی","کارشناسی ارشد","دکترا"];
 let countryLevel = ["تهران","بوشهر","اصفهان","البرز","فارس","مرکزی","همدان","خوزستان","اردبیل","یزد"];
@@ -37,16 +38,16 @@ function Signup() {
             {!result && (<h3 className="signup-header">رایگان ثبت نام کنید</h3>)}
             {!result && (<div className="input-parent">
                 <div>
-                    <input onChange={(e) => setFamily(e.target.value)} type={"text"} placeholder={"نام خانوادگی *"} className={"fa"} size={15}/>
+                    <Input value={family} change={(e) => setFamily(e.target.value)} type={"text"} textHolder={"نام خانوادگی *"} language={"fa"} size={15}/>
                     {!family && (<div className="error">لطفا فیلد پر شود</div>)}
                 </div>
                 <div>
-                    <input onChange={(e) => setName(e.target.value)} placeholder={"نام *"} className={"fa"} size={15} type={"text"}/>
+                    <Input value={name} change={(e) => setName(e.target.value)} textHolder={"نام *"} language={"fa"} size={15} type={"text"}/>
                     {!name && (<div className="error">لطفا فیلد پر شود</div>)}
                 </div>
             </div>)}
             {!result && (<div>
-                <input onChange={(e) => {validateEmail(e);setEmail(e.target.value)}} className={"en"} size={38} type={"email"} placeholder={"پست الکترونیک *"}/>
+                <Input value={email} change={(e) => {validateEmail(e);setEmail(e.target.value)}} language={"en"} size={38} type={"email"} textHolder={"پست الکترونیک *"}/>
                 {!email && (<div className="error">لطفا فیلد پر شود</div>)}
                 {!emailValidation && email && (<div className="error">ایمیل اشتباه است</div>)}
             </div>)}
@@ -56,7 +57,7 @@ function Signup() {
             </div>)}
             {!result && (<div className="education-input-parent">
                 <div>
-                    {display && (<input onChange={(e) => setEducationPlace(e.target.value) } className={"fa"} size={15} type={"text"} placeholder={"محل تحصیلات *"}/>)}
+                    {display && (<Input value={educationPlace} change={(e) => setEducationPlace(e.target.value) } language={"fa"} size={15} type={"text"} textHolder={"محل تحصیلات *"}/>)}
                     {display && !educationPlace && (<div className="error">لطفا فیلد پر شود</div>)}
                 </div>
                 <Selection selectValue={(e) => {setEducation(educationLevel[parseInt(e.target.value)])}} selectionText={"انتخاب تحصیلات"} clickAction={(e)=>{e.target.value === "false" ? setDisplay(false) : setDisplay(true);}} size={display ? 152 : 313} formFor={educationLevel} />
