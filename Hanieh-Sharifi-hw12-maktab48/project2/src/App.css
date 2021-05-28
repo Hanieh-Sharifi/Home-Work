@@ -1,0 +1,99 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul
+{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px auto;
+}
+.btn
+{
+    padding: 10px 20px ;
+    width:  150px ;
+    border:  0 ;
+    margin: auto ;
+    background-color: green ;
+    color: white ;
+    cursor: pointer;
+}
+li
+{
+    padding: 5px 15px;
+    list-style: none;
+    width: max-content;
+    border-radius: 5px;
+    margin: 1px;
+    font-family: serif;
+    font-size: large;
+    cursor: pointer;
+    position: relative;
+}
+.boy
+{
+    background-color: rgb(0,184,255);
+}
+.girl
+{
+    background-color: rgb(255,120,189);
+}
+input
+{
+    height: 60px;
+    width: 90%;
+    margin: 20px auto;
+    padding: 12px 20px;
+    outline: none;
+    border: 10px solid rgb(0,113,156);
+    font-size: 1.2rem;
+}
+::placeholder
+{
+    text-align: center;
+}
+.favorite
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border: 1px solid gray;
+    width: 90%;
+    margin: auto;
+    padding: 30px 0px;
+}
+.favorite-card-parent
+{
+    display: flex;
+}
+.li-btn
+{
+    position:absolute;
+    top:0;
+    right:2px;
+    font-size:1rem;
+    background-color:red;
+    border:0;
+    display: none;
+    cursor: pointer;
+}
+li:hover > button
+{
+    display: block;
+}
+.favorite-place-holder
+{
+    margin-bottom: 30px;
+    color: gray;
+    font-size: 1.5rem;
+}
+.favorite-card-parent li
+{
+    cursor: default;
+}

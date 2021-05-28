@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.app-parent
+{
+    background-color: rgb(240,240,240);
+    border: 1px solid black;
+    width: 70%;
+    /* height: 1500px; */
+    padding: 10px 20px;
+    margin: auto;
+    height: max-content;
+}
+
+.header-parent
+{
+    background-color: #fff;
+    height: max-content;
+    width: 80%;
+    height: 350px;
+    margin: auto;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    border: 1px solid black;
+    border-top: 2px solid rgb(245, 39, 74);
+    box-shadow: 0px 0px 29px 5px rgba(0,0,0,0.26);
+}
+
+.title-parent, .timer-parent
+{
+    text-align: left;
+    padding: 5px 10px;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.last-items-parent
+{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.menu-items-parent
+{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    height: 800px;
+    /* padding-bottom: 80px; */
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.item
+{
+    width: 350px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    cursor: pointer;
+    margin: auto;
+}
+.item > div
+{
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.item > div > h4
+{
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-family: 'Odibee Sans', cursive;
+}
+.item > div > p
+{
+    font-weight: 100;
+}
+
+
+
+.last-items-parent
+{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.last-items-parent .item
+{
+    font-size: 1.7rem;
+    width: 75%;
+}
+
+.buttons
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+}
+.buttons > button
+{
+    background-color: #fff;
+    color: black;
+    border: 0;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+}
