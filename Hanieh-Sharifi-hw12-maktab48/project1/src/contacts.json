@@ -1,0 +1,50 @@
+[
+    {
+        "id" : 1,
+        "name": "Miller Edsitty",
+        "number": "12-1234-123",
+        "email": "miller@email.com",
+        "address": "Brockton Avenue, Abington",
+        "image" : "image1"
+    },
+    {
+        "id" : 2,
+        "name": "Jones Elmaleh",
+        "number": "234-2345-234",
+        "email": "jones@email.com",
+        "address": "Memorial Dr, Chicopee",
+        "image" : "image2"
+    },
+    {
+        "id" : 3,
+        "name": "Daimean Eschenberg",
+        "number": "345-3546-345",
+        "email": "daimean@email.com",
+        "address": "Lynnway, Lynn",
+        "image" : "image3"
+    },
+    {
+        "id" : 4,
+        "name": "Williams Evartt",
+        "number": "456-4567-456",
+        "email": "williams@email.com",
+        "address": "Boston Road, Springfield",
+        "image" : "image4"
+    },
+    {
+        "id" : 5,
+        "name": "Thompson Fleyshman",
+        "number": "567-5678-567",
+        "email": "thompson@email.com",
+        "address": "Palmer Road, Ware",
+        "image" : "image5"
+    },
+    {
+        "id" : 6,
+        "name": "Hall Homsley",
+        "number": "678-6789-678",
+        "email": "hall@email.com",
+        "address": "Thruway Plaza, Cheektowaga",
+        "image" : "image6"
+    }
+]
