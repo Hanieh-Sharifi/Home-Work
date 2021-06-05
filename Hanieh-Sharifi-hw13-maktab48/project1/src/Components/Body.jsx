@@ -1,16 +1,18 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import Items from "./Items";
 import Detail from "./Detail";
 import SelectedItemContext from '../Contexts/SelectedItemContext';
+import BodyDisplay from '../Contexts/BodyDisplay';
 
 function Body() {
 
     const [selectedItem, setSelectedItem] = useState({});
-    const [toggleBodyDisplay, setToggleBodyDisplay] = useState(false)
+    const {toggleBodyDisplay} = useContext(BodyDisplay);
+
 
     return (
         <div>
-            <SelectedItemContext.Provider value={{selectedItem,setSelectedItem,setToggleBodyDisplay}}>
+            <SelectedItemContext.Provider value={{selectedItem,setSelectedItem}}>
                 {toggleBodyDisplay? <Detail/> : <Items/>}
             </SelectedItemContext.Provider>
         </div>

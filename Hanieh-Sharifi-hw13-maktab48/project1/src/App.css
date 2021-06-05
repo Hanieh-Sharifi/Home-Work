@@ -7,13 +7,7 @@
     box-sizing: border-box;
 }
 
-/* .App
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    /* height: 100vh; */
-/* } */
+/* header classes and styles  */
 
 .header-main-parent
 {
@@ -52,10 +46,10 @@
 }
 .header-ul > li > a
 {
+    text-decoration: none;
     cursor: pointer;
     font-weight: 600;
     color: black;
-    text-decoration: none;
 }
 .header-input-parent
 {
@@ -107,6 +101,9 @@
     cursor: pointer;
 }
 
+/* main body classes  */
+
+/* items component classes and cards  */
 
 .items-main-parent
 {
@@ -129,7 +126,6 @@
     flex-direction: column;
     justify-content: space-between;
 }
-  
 .card:hover
 {
     box-shadow: 0px 0px 25px 1px rgba(0,0,0,0.71);
@@ -142,7 +138,6 @@
     height: 200px ;
     pointer-events: none;
 }
-
 .container
 {
     height: 100px;
@@ -156,6 +151,140 @@
     pointer-events: none;
 }
 
+
+/* detailed page component classes  */
+
+.detail-main-parent
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.detail-row-one
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.detail-country-information
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: left;
+    padding: 15px;
+    height: 250px;
+    width: 500px;
+    background-color: rgb(44,73,113);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+.detail-country-information > p
+{
+    display: flex;
+    font-size: 1rem;
+    margin-left: 15px;
+}
+.detail-country-information > p > p
+{
+    font-size: 1.2rem;
+    color: rgb(242,189,42);
+}
+.detail-flag
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.detail-flag > img
+{
+    object-fit:fill ;
+    min-width: 400px ;
+    height: 250px ;
+}
+.detail-row-two
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.detail-weather-report
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+    margin-bottom: 30px;
+    width: 95%;
+    height: 250px;
+    background-color:rgb(29,107,149);
+    color: black;
+}
+.main-part-detail-weather-report
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 90%;
+    padding: 15px 0px;
+    font-family: 'Roboto', sans-serif;
+}
+.main-part-detail-weather-report > div > img
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    object-fit: fill;
+    width: 150px;
+    height: 150px;
+}
+.main-part-detail-weather-report > div
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.explenation-part-detail-weather-report
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: left;
+    height: 97%;
+}
+.explenation-part-detail-weather-report > p
+{
+    display: flex;
+    font-size: 1.1rem;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    font-weight: 600;
+}
+.explenation-part-detail-weather-report > p > p
+{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgb(242,189,42);
+}
+.google-map
+{
+    margin-bottom: 50px;
+}
+
+
+
+
+/* footer classes and style */
 
 .footer-main-parent
 {
@@ -173,7 +302,7 @@
 .footer-main-text
 {
     font-family: 'Roboto', sans-serif;
-    font-weight: 500;
+    font-weight:400;
 }
 .footer-ul-parent
 {
@@ -198,4 +327,32 @@
     list-style-type:"\2713";
     font-size: 1.2rem;
     font-family: 'Roboto', sans-serif;
+}
+
+/* dark theme styles */
+
+.App
+{
+    background-color: rgb(45,45,45) ;
+    color: white ;
+}
+
+.header-main-parent-dark
+{
+    background-color: rgb(141,38,99) ;
+    color: white ;
+}
+.header-link-dark
+{
+    color: white !important;
+}
+
+.card-dark
+{
+    background-color: rgb(63,74,77);
+}
+
+.footer-main-parent-dark
+{
+    background-color: rgb(10,24,46);
 }

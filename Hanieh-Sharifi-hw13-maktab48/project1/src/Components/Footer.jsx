@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {FaRegCopyright} from "react-icons/fa";
+import ThemeContext from '../Contexts/ThemeContext';
 
 function Footer() {
+
+    const {theme} = useContext(ThemeContext);
+
     return (
-        <footer id="footer" className="footer-main-parent">
+        <footer id="footer" className={`footer-main-parent ${theme==="light"?"":"footer-main-parent-dark"}`}>
             <h1 className="footer-main-text" >Best weathers around the world</h1>
             <div className="footer-ul-parent">
                 <ul className="footer-ul">
