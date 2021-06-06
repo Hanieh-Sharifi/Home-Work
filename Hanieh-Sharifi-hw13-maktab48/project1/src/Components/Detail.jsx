@@ -1,4 +1,5 @@
 import React,{useContext, useEffect, useState} from 'react'; 
+import LanguageContext from '../Contexts/LanguageContext';
 import SelectedItemContext from '../Contexts/SelectedItemContext';
 import MyMapComponent from "./MyMapComponent";
 
@@ -7,11 +8,13 @@ import MyMapComponent from "./MyMapComponent";
 function Detail() {
 
     const {selectedItem} = useContext(SelectedItemContext);
+    const {language} = useContext(LanguageContext);
     const [weatherData, setWeatherData] = useState({});
     const [weather, setweather] = useState({});
     const [wind, setWind] = useState({});
     const [main, setMain] = useState({});
     const [coord, setCoord] = useState({});
+
 
     useEffect(()=>{
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${selectedItem.name==="Iran (Islamic Republic of)"? "Iran": selectedItem.name}&appid=15ef81c63f2b1a6d70940008e3256cdb`)
@@ -25,7 +28,7 @@ function Detail() {
         <div className="detail-main-parent">
             <div className="detail-row-one">
                 <div className="detail-country-information">
-                    <h2>{selectedItem.name}</h2>
+                    <h2>{language==="en"? selectedItem.name : selectedItem.translations[language]}</h2>
                     <p><p>Native Name : </p> &nbsp;{selectedItem.nativeName}</p>
                     <p><p>Capital : </p>&nbsp;{selectedItem.capital}</p>
                     <p><p>Region : </p> &nbsp;{selectedItem.region}</p>

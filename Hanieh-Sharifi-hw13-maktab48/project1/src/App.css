@@ -20,17 +20,29 @@
     width: 100%;
     height: 60px;
     padding: 0px 45px;
+    padding-left: 20px;
     background-color: rgb(216,187,181);
     color: black;
     font-family: 'Roboto', sans-serif;
     margin-bottom: 40px;
 }
+.menu-bar
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    cursor: pointer;
+    /* margin-right: 10px; */
+}
 .header-main-text
 {
     font-size: 1.7rem;
-    width: 9%;
+    /* width: 9%; */
     cursor: default;
-    margin-right: 20px;
+    /* margin-right: 20px; */
+    /* text-align: left; */
 }
 .header-ul-parent
 {
@@ -92,13 +104,66 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content:space-around;
     width:9%;
     font-size: 1.3rem;
 }
 .header-context-toggler > div
 {
     cursor: pointer;
+}
+
+
+/* header drop down classes */
+
+.main-dropDown-parent
+{
+    position: absolute;
+    top: 17px;
+    display: flex;
+    flex-direction: column;
+    /* margin-left: 2%; */
+}
+.dropDown-placeHolder
+{
+    font-size: 1.3rem;
+}
+.Dropdown-arrow-wrapper
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+.dropDown-menu-control
+{
+    display: flex;
+    flex-direction: row;
+}
+.dropDown-menu
+{
+    direction: rtl;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 43px;
+    right: 0;
+    width: 134px;
+    padding: 5px 10px;
+    background-color: rgb(247,193,180);
+    color: black;
+}
+.dropDown-menu > div
+{
+    padding: 5px 0;
+    border-bottom: 1px solid black;
+}
+.dropDown-menu > div:hover
+{
+    background-color: rgb(218, 128, 106);
+}
+.dropDown-menu > div:last-child
+{
+    border: 0;
 }
 
 /* main body classes  */
@@ -347,6 +412,20 @@
     color: white !important;
 }
 
+.dropDown-menu-dark
+{
+    background-color: rgb(73,41,80);
+    color: white;
+}
+.dropDown-menu-dark > div
+{
+    border-bottom: 1px solid white;
+}
+.dropDown-menu-dark > div:hover
+{
+    background-color: rgb(121, 81, 129);
+}
+
 .card-dark
 {
     background-color: rgb(63,74,77);
@@ -356,3 +435,14 @@
 {
     background-color: rgb(10,24,46);
 }
+
+
+/* media query for responsive design  */
+
+/* @media (min-width: 850px)
+{
+    .menu-bar
+    {
+        display: block;
+    }
+} */

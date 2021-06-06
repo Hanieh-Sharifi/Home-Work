@@ -15,7 +15,8 @@ function App ()
     const [data, setData] = useState([]);
     const [inputValue, setInputValue] = useState("");
     const [toggleBodyDisplay, setToggleBodyDisplay] = useState(false);
-    const [theme, setTheme] = useState("light")
+    const [theme, setTheme] = useState("light");
+    const [language, setLanguage] = useState("en");
 
     useEffect(()=>{
         fetch("https://restcountries.eu/rest/v2/")
@@ -26,7 +27,7 @@ function App ()
 
     return(
         <div className={`${theme==="light" ? "" : "App"}`} style={{}}>
-            <LanguageContext.Provider value={"mhm"}>
+            <LanguageContext.Provider value={{language,setLanguage}}>
                 <ThemeContext.Provider value={{theme,setTheme}}>
                     <MainData.Provider value={{data,setData,inputValue,setInputValue}}>
                         <BodyDisplay.Provider value={{toggleBodyDisplay,setToggleBodyDisplay}}>

@@ -3,9 +3,35 @@ import {FcSearch} from 'react-icons/fc';
 import {FaRegMoon} from "react-icons/fa";
 import {BiSun} from "react-icons/bi";
 import {MdLanguage} from "react-icons/md";
+import {IoIosArrowDown,IoIosArrowUp} from "react-icons/io";
+import {VscThreeBars} from "react-icons/vsc";
 import MainData from '../Contexts/MainData';
 import BodyDisplay from '../Contexts/BodyDisplay';
 import ThemeContext from '../Contexts/ThemeContext';
+import Dropdown from 'react-dropdown';
+import LanguageContext from '../Contexts/LanguageContext';
+
+import { useMediaPredicate } from "react-media-hook";
+
+const dropDownOptions = ["English","Germany","Spanish","French","Japanese","Italian","Breton","Portuguese","Dutch","Croatian","Persian"];
+const dropDownOptionsCode = ["en","de","es","fr","ja","it","br","pt","nl","hr","fa"];
+
+
+const MaxComponent = (inputComponent) => {
+    const smallerThan850 = useMediaPredicate("(max-width: 850px)");
+    
+    return smallerThan850 && inputComponent;
+};
+const MinComponent = (inputComponent) => {
+    const biggerThan850 = useMediaPredicate("(min-width: 850px)");
+
+    return biggerThan850 && inputComponent;
+}
+const InputComponent = (inputComponent) => {
+    const smallerThan600 = useMediaPredicate("(min-width: 600px)");
+
+    return smallerThan600 && inputComponent;
+}
 
 function Header() {
 
@@ -13,30 +39,41 @@ function Header() {
     const {setToggleBodyDisplay} = useContext(BodyDisplay);
     const [internalInputValue, setInternalInputValue] = useState("");
     const {theme,setTheme} = useContext(ThemeContext);
+    const {setLanguage} = useContext(LanguageContext);
+
+    function setLanguageValue(e)
+    {
+        let index = dropDownOptions.indexOf(e.value)
+        setLanguage(dropDownOptionsCode[index]);
+    }
+
 
     return (
         <header className={`header-main-parent ${theme==="light"?"":"header-main-parent-dark"}`}>
+            <div className="menu-bar">
+                {MaxComponent(<VscThreeBars/>)}
+            </div>
             <h1 className="header-main-text">Weather</h1>
             <div  className="header-ul-parent">
-                <ul className="header-ul">
+                {MinComponent(<ul className="header-ul">
                     <li onClick={()=>setToggleBodyDisplay(false)}><a className={`${theme==="light"?"":"header-link-dark"}`}>Home</a></li>
                     <li><a className={`${theme==="light"?"":"header-link-dark"}`} href="#footer">Best Weathers</a></li>
-                </ul>
+                </ul>)}
             </div>
-            <form  onSubmit={(e) => {e.preventDefault();setInputValue(internalInputValue)}} className="header-input-parent">
+{InputComponent(<form  onSubmit={(e) => {e.preventDefault();setInputValue(internalInputValue)}} className="header-input-parent">
                 <input value={internalInputValue} onChange={(e) => {e.target.value==="" && setInputValue("");setInternalInputValue(e.target.value)}} type="text" size={35}/>
                 <div className="search-icon-parent">
                     <button type="submit">
                         <FcSearch/>
                     </button>
                 </div>
-            </form>
+            </form>)}
             <div className="header-context-toggler">
                 <div onClick={() => theme==="light" ? setTheme("dark") : setTheme("light")}>
                     {theme==="light" ?<FaRegMoon/> : <BiSun/>}
                 </div>
                 <div>
-                    <MdLanguage/>
+                    <Dropdown onChange={(e) => setLanguageValue(e)} arrowClassName='dropDown-arrow' placeholderClassName='dropDown-placeHolder' controlClassName='dropDown-menu-control' arrowClosed={<IoIosArrowDown/>}  arrowOpen={<IoIosArrowUp/>} menuClassName={`dropDown-menu ${theme==="light"?"":"dropDown-menu-dark"}`} className='main-dropDown-parent' options={dropDownOptions} placeholder={<MdLanguage/>} />
                 </div>
             </div>
         </header>
