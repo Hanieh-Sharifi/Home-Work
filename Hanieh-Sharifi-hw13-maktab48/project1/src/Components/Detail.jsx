@@ -37,7 +37,7 @@ function Detail() {
                     <p><p>TimeZone : </p> &nbsp;{selectedItem.timezones}</p>
                 </div>
                 <div className="detail-flag">
-                    <img style={{objectFit:"fill",width:"200px"}} src={selectedItem.flag}/>
+                    <img alt="flag" style={{objectFit:"fill",width:"200px"}} src={selectedItem.flag}/>
                 </div>
             </div>
             <div className="detail-row-two">
@@ -56,19 +56,12 @@ function Detail() {
                         <p><p>Visibility : </p>&nbsp;{weatherData.visibility}&nbsp;&nbsp;<p>M</p></p>
                     </div>
                 </div>
-                <div className="google-map">
-                    <MyMapComponent
-                        center={coord}
-                        isMarkerShown
-                        googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEyMI1NdTC--xyLptfoyPLiWG9BQqOmJs"
-                        loadingElement={<div style={{ height: `100%` }} />}
-                        containerElement={<div style={{ height: `400px` }} />}
-                        mapElement={<div style={{ height: `100%` }} />}
-                    />
+                <div>
+                    {coord.lon && <MyMapComponent long={coord.lon} latit={coord.lat} />}
                 </div>
             </div>
         </div>
     )
 }
 
-export default Detail
+export default Detail;

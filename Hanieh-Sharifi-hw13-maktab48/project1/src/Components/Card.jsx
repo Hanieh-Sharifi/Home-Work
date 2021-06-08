@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext} from 'react';
 import SelectedItemContext from '../Contexts/SelectedItemContext';
 import BodyDisplay from '../Contexts/BodyDisplay';
 import ThemeContext from "../Contexts/ThemeContext";
@@ -23,4 +23,4 @@ function Card({data}) {
     )
 }
 
-export default Card
+export default Card;
