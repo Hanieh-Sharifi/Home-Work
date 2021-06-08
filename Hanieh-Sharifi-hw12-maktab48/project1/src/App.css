@@ -182,7 +182,7 @@ input:read-only
 }
 ::-webkit-scrollbar
 {
-    width: 0;  /* Remove scrollbar space */
+    width: 0;
 }
 
 .detailed-page
@@ -283,4 +283,42 @@ input:read-only
 .green
 {
     color: green;
+}
+
+.search-bar__input
+{
+    padding-left: 0px !important;
+    width: 350px !important;
+    border-radius: 0 !important;
+    height: 40px !important;
+    padding-left: 20px !important;
+    border: 0 !important;
+    height: 35px;
+    color: white;
+    background-color: rgba(25,56,74,0);
+    padding: 0 15px;
+    cursor: pointer;
+    display: flex;
+    margin: auto;
+    outline: 1px solid #4c87ae;
+}
+.search-bar__input:focus
+{
+    outline: 1px solid #4c87ae !important;
+
+}
+
+.search-bar__history
+{
+    position: absolute;
+    z-index: 1000;
+    top: 40px;
+    width: 350px !important;
+    min-width: 200px;
+    padding: 0 15px;
+    box-shadow: 0 0 3px #ccc;
+    display: none;
+    transition: all .4s;
+    background-color: white;
+    border-radius: 0 !important;
 }

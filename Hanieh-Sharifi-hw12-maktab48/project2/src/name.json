@@ -1,87 +1,252 @@
 [
     {
-        "id": 0,
-        "name": "Aria",
-        "sex": "girl"
-    }, {
-        "id": 1,
-        "name": "Logan",
-        "sex": "boy"
-    }, {
-        "id": 2,
-        "name": "Quinn",
-        "sex": "girl"
-    }, {
-        "id": 3,
-        "name": "Kai",
-        "sex": "boy"
-    }, {
-        "id": 4,
-        "name": "Dashiell",
-        "sex": "boy"
-    }, {
-        "id": 5,
-        "name": "John",
-        "sex": "boy"
-    }, {
-        "id": 6,
-        "name": "Seraphina",
-        "sex": "girl"
-    }, {
-        "id": 7,
-        "name": "Caroline",
-        "sex": "girl"
-    }, {
-        "id": 8,
-        "name": "Tobias",
-        "sex": "boy"
-    }, {
-        "id": 9,
-        "name": "Harper",
-        "sex": "girl"
-    }, {
-        "id": 10,
-        "name": "Mabe",
-        "sex": "girl"
-    }, {
-        "id": 11,
-        "name": "Iris",
-        "sex": "girl"
-    }, {
-        "id": 12,
-        "name": "Beatrice",
-        "sex": "girl"
-    }, {
-        "id": 13,
-        "name": "Knox",
-        "sex": "boy"
-    }, {
-        "id": 14,
-        "name": "August",
-        "sex": "boy"
-    }, {
-        "id": 15,
-        "name": "Poppy",
-        "sex": "girl"
-    }, {
-        "id": 16,
-        "name": "Aurora",
-        "sex": "girl"
-    }, {
-        "id": 17,
-        "name": "Wyatt",
-        "sex": "boy"
-    }, {
-        "id": 18,
-        "name": "Ezra",
-        "sex": "boy"
-    }, {
-        "id": 19,
-        "name": "Emily",
-        "sex": "girl"
-    }, {
-        "id": 20,
-        "name": "Sebastian",
-        "sex": "boy"
+      "id": 1,
+      "name": "Ali",
+      "sex": "girl"
+    },
+    {
+      "id": 2,
+      "name": "Enrico",
+      "sex": "boy"
+    },
+    {
+      "id": 3,
+      "name": "Justen",
+      "sex": "girl"
+    },
+    {
+      "id": 4,
+      "name": "Alycia",
+      "sex": "girl"
+    },
+    {
+      "id": 5,
+      "name": "Wallace",
+      "sex": "boy"
+    },
+    {
+      "id": 6,
+      "name": "Oren",
+      "sex": "girl"
+    },
+    {
+      "id": 7,
+      "name": "Ryan",
+      "sex": "girl"
+    },
+    {
+      "id": 8,
+      "name": "Francis",
+      "sex": "boy"
+    },
+    {
+      "id": 9,
+      "name": "Rodger",
+      "sex": "girl"
+    },
+    {
+      "id": 10,
+      "name": "Rick",
+      "sex": "girl"
+    },
+    {
+      "id": 11,
+      "name": "Dee",
+      "sex": "girl"
+    },
+    {
+      "id": 12,
+      "name": "Skyla",
+      "sex": "boy"
+    },
+    {
+      "id": 13,
+      "name": "Lurline",
+      "sex": "girl"
+    },
+    {
+      "id": 14,
+      "name": "Belle",
+      "sex": "girl"
+    },
+    {
+      "id": 15,
+      "name": "Arnold",
+      "sex": "girl"
+    },
+    {
+      "id": 16,
+      "name": "Aditya",
+      "sex": "boy"
+    },
+    {
+      "id": 17,
+      "name": "Andres",
+      "sex": "girl"
+    },
+    {
+      "id": 18,
+      "name": "Fletcher",
+      "sex": "girl"
+    },
+    {
+      "id": 19,
+      "name": "Camron",
+      "sex": "boy"
+    },
+    {
+      "id": 20,
+      "name": "Tyshawn",
+      "sex": "girl"
+    },
+    {
+      "id": 21,
+      "name": "Carter",
+      "sex": "girl"
+    },
+    {
+      "id": 22,
+      "name": "Kailey",
+      "sex": "boy"
+    },
+    {
+      "id": 23,
+      "name": "Nora",
+      "sex": "girl"
+    },
+    {
+      "id": 24,
+      "name": "Zakary",
+      "sex": "girl"
+    },
+    {
+      "id": 25,
+      "name": "Esteban",
+      "sex": "boy"
+    },
+    {
+      "id": 26,
+      "name": "Genoveva",
+      "sex": "girl"
+    },
+    {
+      "id": 27,
+      "name": "Kyla",
+      "sex": "boy"
+    },
+    {
+      "id": 28,
+      "name": "Yesenia",
+      "sex": "girl"
+    },
+    {
+      "id": 29,
+      "name": "Felton",
+      "sex": "boy"
+    },
+    {
+      "id": 30,
+      "name": "Kiel",
+      "sex": "girl"
+    },
+    {
+      "id": 31,
+      "name": "Verna",
+      "sex": "boy"
+    },
+    {
+      "id": 32,
+      "name": "Jarred",
+      "sex": "girl"
+    },
+    {
+      "id": 33,
+      "name": "Austen",
+      "sex": "boy"
+    },
+    {
+      "id": 34,
+      "name": "Jerry",
+      "sex": "girl"
+    },
+    {
+      "id": 35,
+      "name": "Phoebe",
+      "sex": "girl"
+    },
+    {
+      "id": 36,
+      "name": "Jalyn",
+      "sex": "girl"
+    },
+    {
+      "id": 37,
+      "name": "Devyn",
+      "sex": "boy"
+    },
+    {
+      "id": 38,
+      "name": "Beryl",
+      "sex": "girl"
+    },
+    {
+      "id": 39,
+      "name": "Conor",
+      "sex": "girl"
+    },
+    {
+      "id": 40,
+      "name": "Laurianne",
+      "sex": "girl"
+    },
+    {
+      "id": 41,
+      "name": "Lauretta",
+      "sex": "boy"
+    },
+    {
+      "id": 42,
+      "name": "Thomas",
+      "sex": "girl"
+    },
+    {
+      "id": 43,
+      "name": "Anais",
+      "sex": "boy"
+    },
+    {
+      "id": 44,
+      "name": "Gray",
+      "sex": "girl"
+    },
+    {
+      "id": 45,
+      "name": "Rubie",
+      "sex": "boy"
+    },
+    {
+      "id": 46,
+      "name": "Amiya",
+      "sex": "girl"
+    },
+    {
+      "id": 47,
+      "name": "Alyce",
+      "sex": "girl"
+    },
+    {
+      "id": 48,
+      "name": "Katlyn",
+      "sex": "boy"
+    },
+    {
+      "id": 49,
+      "name": "Elena",
+      "sex": "boy"
+    },
+    {
+      "id": 50,
+      "name": "Jarrod",
+      "sex": "boy"
     }
-]
+  ]

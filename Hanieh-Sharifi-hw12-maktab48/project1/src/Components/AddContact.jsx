@@ -1,5 +1,4 @@
 import React,{useState} from 'react';
-import Modal from 'react-modal';
 import Input from "./Input";
 import Button from "./Button";
 import {FiCheck} from "react-icons/fi";
@@ -28,7 +27,6 @@ function AddContact({newInf,discard}) {
                 <Button className="green" onClick={()=> checkButtonClicked()} ><FiCheck/></Button>
                 <Button onClick={discard}><GiCardDiscard/></Button>
             </div>
-            <Modal/>
         </div>
     )
 }
