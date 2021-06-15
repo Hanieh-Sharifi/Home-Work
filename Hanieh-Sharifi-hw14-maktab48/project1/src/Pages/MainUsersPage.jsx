@@ -9,6 +9,8 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import FetchData from '../HOC/FetchData';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -56,7 +58,7 @@ function MainUsersPage({data})
       <CssBaseline />
         <Container className={classes.cardGrid} maxWidth="lg">
           <Grid container spacing={4}>
-            {data && data.map((data) => (
+            {data!=="Not found" && data.map((data) => (
               <Grid item key={data.id} xs={12} sm={6} md={4} lg={3}>
                 <Card id={data.id} onClick={(e)=>history.push(`/user/${e.target.id}`)} className={classes.card}>
                   {data && <CardMedia
