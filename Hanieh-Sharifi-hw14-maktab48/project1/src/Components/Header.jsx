@@ -64,12 +64,12 @@ function Header()
                     {displayer && (<MenuList variant="menu">
                             <Box>
                                 <MenuItem>
-                                        Home
+                                    <Link to="/" onClick={() => setDisplayer(false)}>Home</Link>
                                 </MenuItem>
                             </Box>
                             <Box>
                                 <MenuItem>
-                                        About Us
+                                    <Link to="/about" onClick={() => setDisplayer(false)}>About Us</Link>
                                 </MenuItem>
                             </Box>
                         </MenuList>)}

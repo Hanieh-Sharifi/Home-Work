@@ -1,9 +1,9 @@
 import React,{ useEffect, useState }  from 'react'
 import { useParams } from 'react-router-dom';
-import LoadingShape from '../Components/LoadingShape';
+import LoadingShape from './LoadingShape';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import {useHistory} from "react-router-dom"
+import {useHistory} from "react-router-dom";
 
 function FetchData(InputComponent,url)
 {

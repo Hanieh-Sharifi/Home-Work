@@ -11,7 +11,10 @@ const useStyles = makeStyles((theme) => ({
       margin: theme.spacing(1),
       width: '25ch',
     },
-    marginLeft:"50px"
+    display:"flex",
+    justifyContent:"center",
+    flexWrap:"wrap",
+    marginTop:"30px"
   },
 }));
 
@@ -26,7 +29,7 @@ function Forms({idData})
   
   return(
         <form className={classes.root} noValidate autoComplete="off">
-          <TextField ref={inputRef} id="outlined-basic" InputProps={{readOnly: true}} value={idData.company} label="Company" variant="outlined"/>
+          <TextField ref={inputRef} id="outlined-basic" InputProps={{readOnly: true}} value={idData.company} label="Company" variant="outlined" autoFocus={true} />
           <TextField id="outlined-basic" InputProps={{readOnly: true}} value={idData.code} label="Code" variant="outlined" />
           <TextField id="outlined-basic" InputProps={{readOnly: true}} value={idData.job} label="Job" variant="outlined" />
           <TextField id="outlined-basic" InputProps={{readOnly: true}} value={idData.firstName} label="First Name" variant="outlined" />

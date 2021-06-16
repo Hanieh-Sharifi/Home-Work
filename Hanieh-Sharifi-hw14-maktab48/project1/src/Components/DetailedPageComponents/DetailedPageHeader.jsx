@@ -43,7 +43,7 @@ function DetailedPageHeader({idData}) {
                     title="avatar"
                 />
             </Grid>
-            <Grid className={classes.form} container item xs={12} md={8}>
+            <Grid className={classes.form} container item xs={12} md={6}>
                 <Forms idData={idData}/>
             </Grid>
         </Grid>

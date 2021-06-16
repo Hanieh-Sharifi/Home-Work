@@ -12,8 +12,11 @@ const useStyles = makeStyles((theme) => ({
         width: '25ch',
         marginBottom:"20px"
       },
+      display:"flex",
+      justifyContent:"center",
+      flexWrap:"wrap",
       marginTop:"30px",
-      marginLeft:"40px",
+      marginBottom:"30px",
     },
   }));
 

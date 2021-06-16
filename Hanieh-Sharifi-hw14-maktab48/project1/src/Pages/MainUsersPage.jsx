@@ -10,10 +10,19 @@ import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import FetchData from '../HOC/FetchData';
 import 'react-toastify/dist/ReactToastify.css';
+import Pagination from '@material-ui/lab/Pagination';
 
 
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    '& > *': {
+      marginTop: theme.spacing(2),
+      marginBottom: theme.spacing(3),
+    },
+    display:"flex",
+    justifyContent:"center"
+  },
   icon: {
     marginRight: theme.spacing(2),
   },
@@ -50,15 +59,29 @@ const useStyles = makeStyles((theme) => ({
 
 function MainUsersPage({data})
 {
+
+    const [page, setPage] = useState(1); 
     const classes = useStyles();
     const history = useHistory();
+    const itemsPerPage = data.length/5;
+    const itemsToRender = data.slice(itemsPerPage*(page-1),itemsPerPage*page);
+
+    function scrollToTop()
+    {
+      window.scrollTo
+      ({
+        top: 0, 
+        behavior: 'smooth'
+      });
+    };
+
 
   return (
     <React.Fragment>
       <CssBaseline />
         <Container className={classes.cardGrid} maxWidth="lg">
           <Grid container spacing={4}>
-            {data!=="Not found" && data.map((data) => (
+            {data!=="Not found" && itemsToRender.map((data) => (
               <Grid item key={data.id} xs={12} sm={6} md={4} lg={3}>
                 <Card id={data.id} onClick={(e)=>history.push(`/user/${e.target.id}`)} className={classes.card}>
                   {data && <CardMedia
@@ -84,6 +107,9 @@ function MainUsersPage({data})
             ))}
           </Grid>
         </Container>
+        <div className={classes.root}>
+          <Pagination count={5} color="primary" onChange={(event,page) => {setPage(+page);scrollToTop()}}/>
+        </div>
     </React.Fragment>
   );
 }
