@@ -31,12 +31,12 @@ function DetailedUser({idData})
             <DetailedPageHeader idData={idData}/>
             <Container className={classes.container}>
                 <Grid container item direction="row" lg alignItems="center" justify="center">
-                    <Grid xs={12} md={6}>
+                    <Grid item xs={12} md={6}>
                         <Button onClick={() => setDisplay(false)} className={classes.button}>
                             <HomeIcon/>
                         </Button>
                     </Grid>
-                    <Grid xs={12} md={6}>
+                    <Grid item xs={12} md={6}>
                         <Button onClick={() => setDisplay(true)} className={classes.button}>
                             <ContactPhoneIcon/>
                         </Button>

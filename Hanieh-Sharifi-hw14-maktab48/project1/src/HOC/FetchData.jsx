@@ -36,7 +36,6 @@ function FetchData(InputComponent,url)
               else
               {
                 const response = await fetch(`${url}`);
-                console.log("response is : " + response.status);
                 if (response.status === 404)
                 {
                   toast.error("Not found");

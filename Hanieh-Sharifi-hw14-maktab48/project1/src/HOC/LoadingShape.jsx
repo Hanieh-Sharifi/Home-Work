@@ -2,18 +2,18 @@ import React from 'react';
 
 function LoadingShape() {
     return (
-        <div id="position" class="sunflower">
-            <div class="head">
-                <div id="eye-1" class="eye"></div>
-                <div id="eye-2" class="eye"></div>
-                <div class="mouth"></div>
+        <div id="position" className="sunflower">
+            <div className="head">
+                <div id="eye-1" className="eye"></div>
+                <div id="eye-2" className="eye"></div>
+                <div className="mouth"></div>
             </div>
-            <div class="petals"></div>
-            <div class="trunk">
-                <div class="left-branch"></div>
-                <div class="right-branch"></div>
+            <div className="petals"></div>
+            <div className="trunk">
+                <div className="left-branch"></div>
+                <div className="right-branch"></div>
             </div>
-            <div class="vase"></div>
+            <div className="vase"></div>
         </div>
     )
 }

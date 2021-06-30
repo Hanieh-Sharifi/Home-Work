@@ -1,10 +1,8 @@
 import React from 'react';
-import Container from '@material-ui/core/Container';
 import CardMedia from '@material-ui/core/CardMedia';
 import { makeStyles } from '@material-ui/core/styles';
 import Forms from "./Forms";
-import TextField from '@material-ui/icons/TextFields';
-import { Box, FormControl, Grid } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     media:{
@@ -36,18 +34,18 @@ function DetailedPageHeader({idData}) {
 
     return (
         <Grid container item direction="row" className={classes.headerParent}>
-            <Grid justify="center" alignItems="center" xs={12} md={4} >
+            <Grid item container justify="center" alignItems="center" xs={12} md={4} >
                 <CardMedia
                     className={classes.media}
                     image={idData.avatar}
                     title="avatar"
                 />
             </Grid>
-            <Grid className={classes.form} container item xs={12} md={6}>
+            <Grid item className={classes.form} container xs={12} md={6}>
                 <Forms idData={idData}/>
             </Grid>
         </Grid>
     )
 }
 
-export default DetailedPageHeader
+export default DetailedPageHeader;

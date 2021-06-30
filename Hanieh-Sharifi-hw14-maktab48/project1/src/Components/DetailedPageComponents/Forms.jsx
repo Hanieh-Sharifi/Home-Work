@@ -1,8 +1,6 @@
-import React,{ useRef } from 'react';
+import React,{ useRef, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
-import { useEffect } from 'react';
-import { useState } from 'react';
 
 
 const useStyles = makeStyles((theme) => ({

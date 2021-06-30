@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import { useHistory } from 'react-router';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -93,12 +93,12 @@ function MainUsersPage({data})
                     <Typography className={classes.words} gutterBottom variant="h6" component="h2">
                         {data.firstName+ " " + data.lastName}
                     </Typography>
-                    <Typography className={classes.words} gutterBottom variant="">
+                    <Typography className={classes.words} gutterBottom variant="inherit">
                         Company: {data.company}
                         <br/>
                         <br/>
                     </Typography>
-                    <Typography  className={classes.words} gutterBottom variant="">
+                    <Typography  className={classes.words} gutterBottom variant="inherit">
                         Phone Number: {data.phone}
                     </Typography>
                   </CardContent>
